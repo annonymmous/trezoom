@@ -1,0 +1,12 @@
+CC = gcc
+
+src = $(wildcard *.c)
+obj = $(src:.c = .o)
+dep = $(obj:-o = .d)
+
+LDFLAGS = -llua
+CFLAGS = -g -L. -L../Lua
+
+//mycrypto: $(obj)
+//    $(CC) -0 $@ $^ $(LDFLAGS) $(CFLAGS)
+
